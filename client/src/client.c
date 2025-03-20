@@ -28,7 +28,7 @@ int main(void)
 	ip = config_get_string_value(config, "IP");
 	puerto = config_get_string_value(config, "PUERTO");
 
-	log_info(logger, valor);
+	log_info(logger, "%s", valor);
 
 	// Usando el config creado previamente, leemos los valores del config y los 
 	// dejamos en las variables 'ip', 'puerto' y 'valor'
@@ -92,7 +92,7 @@ void leer_consola(t_log* logger)
 	leido = readline("> ");
 
 	while (!strcmp(leido, "")) {  
-    	log_info(logger, leido);  
+    	log_info(logger, "%s",leido);  
     	free(leido);  
 
     	leido = readline("> ");  
